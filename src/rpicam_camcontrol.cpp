@@ -52,7 +52,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "interface/mmal/util/mmal_connection.h"
 
 
-#include "raspicam_camcontrol.hpp"
+#include "rpicam_camcontrol.hpp"
 
 // TODO: 1151 strncat warning
 

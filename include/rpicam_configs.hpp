@@ -4,7 +4,7 @@
 #include <string>
 #include <unordered_map>
 
-#include "raspicam_camcontrol.hpp"
+#include "rpicam_camcontrol.hpp"
 
 
 // Standard port setting for the camera component

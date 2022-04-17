@@ -1,7 +1,7 @@
 #include <iostream>
-#include "raspi_encamode.hpp"
-#include "raspi_encamode_configs.hpp"
-#include "raspicam_camcontrol.hpp"
+#include "rpicam.hpp"
+#include "rpicam_configs.hpp"
+#include "rpicam_camcontrol.hpp"
 #include "cxxopts.hpp"
 
 // Prototypes

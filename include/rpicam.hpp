@@ -5,7 +5,7 @@
 #include "mmal.h"
 #include "mmal_parameters_video.h"
 #include "util/mmal_connection.h"
-#include "raspi_encamode_configs.hpp" 
+#include "rpicam_configs.hpp" 
 
 class RaspiEncamode;   // forward declaration
 

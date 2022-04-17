@@ -88,8 +88,8 @@ extern "C" {
 #include "interface/mmal/util/mmal_connection.h"
 #include "interface/mmal/mmal_parameters_camera.h"
 
-#include "raspi_encamode_configs.hpp"
-#include "raspi_encamode.hpp"
+#include "rpicam_configs.hpp"
+#include "rpicam.hpp"
 
 // TODO EWING is this correct?
 static std::shared_ptr<spdlog::logger> p_err_logger;
