@@ -1,17 +1,17 @@
 cmake_minimum_required (VERSION 3.10) 
-project (raspicam_cpp 
+project( rpicam_cpp 
     VERSION 0.3.0
     LANGUAGES CXX
 )
 set (CMAKE_CXX_STANDARD 17)
 
 # Determine whether this is a standalone project or included by other projects
-set(CXXOPTS_STANDALONE_PROJECT OFF)
+set(RPICAMCPP_STANDALONE_PROJECT OFF)
 if (CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
-    set(CXXOPTS_STANDALONE_PROJECT ON)
+    set(RPICAMCPP_STANDALONE_PROJECT ON)
 endif()
 
-option(RASPICAM_CPP_BUILD_EXAMPLES "Set to ON to build examples" ${CXXOPTS_STANDALONE_PROJECT})
+option(RPICAMCPP_BUILD_EXAMPLES "Set to ON to build examples" ${RPICAMCPP_STANDALONE_PROJECT})
 
 
 
@@ -22,7 +22,7 @@ option(RASPICAM_CPP_BUILD_EXAMPLES "Set to ON to build examples" ${CXXOPTS_STAND
 
 #find_package(cxxopts REQUIRED)  # for test main
 #find_package(spdlog REQUIRED)
-if(CXXOPTS_STANDALONE_PROJECT)
+if(RPICAMCPP_STANDALONE_PROJECT)
 	add_subdirectory(lib/cxxopts)
 	add_subdirectory(lib/spdlog)
 endif()
@@ -62,8 +62,8 @@ set_target_properties(vcos PROPERTIES IMPORTED_LOCATION /opt/vc/lib/libvcos.so )
 
 
 add_library(${PROJECT_NAME}
-	src/raspi_encamode.cpp
-	src/raspicam_camcontrol.cpp
+	src/rpicam.cpp
+	src/rpicam_camcontrol.cpp
 )
 target_include_directories(${PROJECT_NAME}
   PUBLIC
@@ -79,9 +79,9 @@ target_link_libraries(${PROJECT_NAME}
 )
 
 # ===== Executables =====
-if (CXXOPTS_BUILD_EXAMPLES)
+if (RPICAMCPP_BUILD_EXAMPLES)
 	add_executable(${PROJECT_NAME}_test
-		src/raspi_encamode_testmain.cpp)
+		src/rpicam_testmain.cpp)
 	target_link_libraries(${PROJECT_NAME}_test
 	PRIVATE
 		cxxopts::cxxopts
