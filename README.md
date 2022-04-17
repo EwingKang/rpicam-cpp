@@ -1,5 +1,5 @@
 # raspicam-cpp
-A C++ wrapper for Raspberry PI camera library, including callbacks, streaming, and encoding.
+A C++ wrapper for Raspberry PI camera library, including callbacks, streaming, and encoding. It can dump accurate timestamp from ISP (Image signal processor) within the RPi4's Broadcom BCM2711 CPU. This is intended to be used as the source for sensor fusion project such as VIO, V-SLAM, etc...
 
 # Dependencies
 This library is intended to be used as a submodule of other projects. However, it still can be compile with some modification. You can include this repo as submodule with cmake `add_subdirectory()` function.  
